@@ -8,17 +8,14 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    subtitle: {
-      type: String,
-      required: true,
-    },
-  },
-};
+<script lang="ts">
+export  interface Props {
+  title: string
+  subtitle?: string
+}
+</script>
+
+<script lang="ts" setup>
+const props = defineProps<Props>()
+
 </script>
